@@ -1,0 +1,8 @@
+Roma-Milano
+Torino-Napoli
+Venezia-Firenze
+Bologna-Bari
+Genova-Verona
+Venezia-Roma
+Napoli-Milano
+Venezia-Trieste
