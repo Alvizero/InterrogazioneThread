@@ -8,6 +8,7 @@ public class GeneratoreClienti implements Runnable {
     public GeneratoreClienti(Biglietteria biglietteria, ArrayList<String> nomi) {
         this.biglietteria = biglietteria;
         this.nomi = nomi;
+        new Thread(this).start();
     }
 
     private boolean isEsecuzione = true;

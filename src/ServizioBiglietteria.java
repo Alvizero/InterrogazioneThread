@@ -5,11 +5,12 @@ import java.util.Random;
 
 public class ServizioBiglietteria implements Runnable {
     private Biglietteria biglietteria;
-    private ArrayList<String> tratte = new ArrayList<String>();
+    private ArrayList<String> tratte = new ArrayList<>();
     
     public ServizioBiglietteria(Biglietteria biglietteria, ArrayList<String> tratte) {
         this.biglietteria = biglietteria;
         this.tratte = tratte;
+        new Thread(this).start();
     }
 
     private String generaCodice() {
@@ -34,7 +35,8 @@ public class ServizioBiglietteria implements Runnable {
             if (cliente != null) {
                 String tratta = tratte.get(random.nextInt(tratte.size()));
                 String codice = generaCodice();
-
+                
+                // DATA
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yy HH:mm:ss");
                 LocalDateTime dataOra = LocalDateTime.now();
                 String dataFormattata = dataOra.format(formatter);

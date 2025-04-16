@@ -19,9 +19,9 @@ public class FileManager {
     // Scrive su un file, aggiungendo o sovrascrivendo in base al parametro append
     public static void scriviSuFile(String filePath, String contenuto, boolean append) {
         try (FileWriter fw = new FileWriter(filePath, append);
-                BufferedWriter bw = new BufferedWriter(fw);
-                PrintWriter out = new PrintWriter(bw)) {
-            out.println(contenuto); // Scrive il contenuto nel file
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter wr = new PrintWriter(bw)) {
+            wr.println(contenuto); // Scrive il contenuto nel file
         } catch (IOException e) {
             System.out.println("Errore nel salvataggio della transazione: " + e.getMessage()); // Log
         }
@@ -60,5 +60,4 @@ public class FileManager {
     
         return lista;  // Restituisci la lista
     }
-    
 }
