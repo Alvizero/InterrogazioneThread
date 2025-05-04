@@ -6,14 +6,14 @@ public class Main {
         ArrayList<String> nomi = new ArrayList<>(FileManager.caricaSuVettore("File/nomi.txt"));
 
         Biglietteria biglietteria = new Biglietteria();
-        ServizioBiglietteria servizio = new ServizioBiglietteria(biglietteria, tratte);
-        GeneratoreClienti generatore = new GeneratoreClienti(biglietteria, nomi);
+        ServizioBiglietteria servizio = new ServizioBiglietteria(biglietteria, tratte); // Thread che offre il servizio di vendita dei biglietti
+        GeneratoreClienti generatore = new GeneratoreClienti(biglietteria, nomi); // Thread che genera i clienti con nomi casuali
 
         try {
-            Thread.sleep(20000); // dopo 20 secondi chiude
+            Thread.sleep(20000); // dopo 20 secondi la biglietteria chiude
             servizio.chiudi();
             generatore.chiudi();
-            System.out.println("Biglietteria chiusa dopo 20 secondi.");
+            System.out.println("Biglietteria chiusa.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

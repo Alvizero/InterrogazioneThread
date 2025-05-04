@@ -13,6 +13,6 @@ public class Cliente implements Runnable {
 
     @Override
     public void run() {
-        biglietteria.entraInCoda(this);
+        biglietteria.entraInCoda(this); // Quando nasce un thread cliente viene messo subito in coda
     }
 }
