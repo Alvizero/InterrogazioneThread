@@ -6,8 +6,6 @@ Cristiano
 Angelica
 Gianluca
 Alice
-Kevin
-Rachele
 Marco
 Vittoria
 Gianmarco
@@ -29,4 +27,4 @@ Martina
 Alessia
 Leonardo
 Tommaso
-Sara
+Federica

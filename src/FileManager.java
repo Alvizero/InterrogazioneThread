@@ -58,6 +58,6 @@ public class FileManager {
             }
         }
     
-        return lista;  // Restituisci la lista
+        return lista;  // Ritorna il vettore
     }
 }

@@ -18,7 +18,7 @@ public class GeneratoreClienti implements Runnable {
         while (isEsecuzione) {
             int probabilita = random.nextInt(100); // 0-99
 
-            if (probabilita<60) { // 60% di entrare
+            if (probabilita<60) { // 60% di possibilita' per entrare
                 String nome = nomi.get(random.nextInt(nomi.size()));
                 Cliente cliente = new Cliente(nome, biglietteria);
                 Thread t = new Thread(cliente);

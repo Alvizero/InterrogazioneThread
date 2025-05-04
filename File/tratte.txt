@@ -4,5 +4,5 @@ Venezia-Firenze
 Bologna-Bari
 Genova-Verona
 Venezia-Roma
-Napoli-Milano
+Roma-Napoli
 Venezia-Trieste

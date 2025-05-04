@@ -6,7 +6,7 @@ public class Biglietteria {
     public synchronized void entraInCoda(Cliente cliente) {
         coda.add(cliente);
         System.out.println(cliente.getNome() + " è entrato in coda. Persone in coda: " + coda.size());
-        notify(); // sveglia il servizio se in attesa
+        notify();
     }
 
     public synchronized Cliente prossimoCliente() {
