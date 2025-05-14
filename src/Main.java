@@ -6,7 +6,7 @@ public class Main {
         ArrayList<String> nomi = new ArrayList<>(FileManager.caricaSuVettore("File/nomi.txt"));
 
         Biglietteria biglietteria = new Biglietteria();
-        ServizioBiglietteria servizio = new ServizioBiglietteria(biglietteria, tratte); // Thread che offre il servizio di vendita dei biglietti
+        ServizioBiglietteria servizio = new ServizioBiglietteria(biglietteria, tratte); // Thread che da il servizio di vendita dei biglietti
         GeneratoreClienti generatore = new GeneratoreClienti(biglietteria, nomi); // Thread che genera i clienti con nomi casuali
 
         try {

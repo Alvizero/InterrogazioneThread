@@ -50,7 +50,7 @@ public class FileManager {
         ArrayList<String> lista = new ArrayList<>();
         String contenuto = leggiDaFile(filePath);  // Leggi il contenuto del file come stringa
     
-        // Se il file non è vuoto, suddividi il contenuto in base alla nuova riga e aggiungi alla lista
+        // Se il file non è vuoto, dividi il contenuto in base alla nuova riga e aggiungi alla lista
         if (!contenuto.isEmpty()) {
             String[] righe = contenuto.split("\n");
             for(int i=0; i<righe.length; i++) {

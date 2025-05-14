@@ -21,9 +21,9 @@ public class Biglietteria {
         }
 
         // Prende il primo cliente della coda e lo rimuove
-        Cliente prossimo = coda.get(0);
+        Cliente prossimoCliente = coda.get(0);
         coda.remove(0);
-        return prossimo;
+        return prossimoCliente;
     }
 
     // Restituisce il numero di clienti in coda

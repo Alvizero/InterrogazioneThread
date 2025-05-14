@@ -21,8 +21,8 @@ public class ServizioBiglietteria implements Runnable {
         String codice = "";
 
         for(int i=0; i<6; i++) { // Genera un codice lungo 6 caratteri
-            int indice = (int) (Math.random() * caratteri.length()); // Prende un carattere casuale tra quelli presenti nella stringa (caratteri)
-            codice += caratteri.charAt(indice); // Aggiunge il carattere "generato" alla stringa del codice
+            int carattere = (int) (Math.random() * caratteri.length()); // Prende un carattere casuale tra quelli presenti nella stringa (caratteri)
+            codice += caratteri.charAt(carattere); // Aggiunge il carattere "generato" alla stringa del codice
         }
         
         return codice;

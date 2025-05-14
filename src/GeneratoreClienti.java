@@ -7,13 +7,13 @@ public class GeneratoreClienti implements Runnable {
     public GeneratoreClienti(Biglietteria biglietteria, ArrayList<String> nomi) {
         this.biglietteria = biglietteria;
         this.nomi = nomi;
-        new Thread(this).start();
+        new Thread(this).start(); // Avvia in automatico il thread appena viene creato
     }
 
     private boolean isEsecuzione = true;
     public void run() {
         while (isEsecuzione) {
-            int probabilita = (int) (Math.random() * 101); // Genera una probabilita' casuale tra 0-100
+            int probabilita = (int) (Math.random() * 101); // Genera un numero casuale tra 0-100, serve per trovare la probabilita' di ingresso in coda
 
             if (probabilita<60) { // 60% di possibilita' per entrare
                 String nome = nomi.get((int) (Math.random() * nomi.size())); // Prende un nome casuale dal vettore nomi ovvero la lista di tutti i nomi
